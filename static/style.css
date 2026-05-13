@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Amulya-Regular';
+    src: url("./Amulya_Complete/Fonts/OTF/Amulya-Regular.otf") format('opentype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amulya-Regular';
+    background-color: #f4f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-height: 100vh;
+}
+.container{
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.link,
+.img {
+    background-color: white;
+    border: 3px solid #87ceeb;
+    border-radius: 15px;
+    padding: 30px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h3 {
+    color: #4aa3df;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #bde7ff;
+    border-radius: 10px;
+    background-color: #f8fcff;
+}
+
+button {
+    background-color: #87ceeb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5fb9df;
+}
+
+img {
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #bde7ff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+p {
+    color: #4aa3df;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #bde7ff;
+    border-radius: 10px;
+    background-color: #f8fcff;
+    color: #4aa3df;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #87ceeb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #5fb9df;
+}
+
+.download{
+    margin-top: 2em;
+}

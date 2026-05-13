@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>QR Generator</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="link">
+            <h3>Generar QR d'una URL</h3>
+
+            <form method="POST">
+                <input type="text" name="webName" placeholder="Escriu la direcció de la web">
+                <button type="submit" name="type" value="url">Generar QR URL</button>
+            </form>
+
+            {% if img_data_url %}
+            <p>Codi QR URL:</p>
+            <img src="data:image/png;base64,{{ img_data_url }}">
+            <a href="{{ download_url_url }}">
+                <button class="download">Descarregar QR</button>
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="img">
+            <h3>Generar QR d'una Imatge</h3>
+
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <button type="submit" name="type" value="img">Generar QR Imatge</button>
+            </form>
+
+            {% if img_data_img %}
+            <p>Codi QR Imatge:</p>
+            <img src="data:image/png;base64,{{ img_data_img }}">
+            <a href="{{ download_url_img }}">
+                <button class="download">Descarregar QR</button>
+            </a>
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+
+</html>
